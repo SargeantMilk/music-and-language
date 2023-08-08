@@ -1,0 +1,97 @@
+/* Universal styles */
+:root{
+/* CSS HEX */
+--rich-black: #02041bff;
+--scarlet: #f33e18ff;
+--pine-green: #087b71ff;
+--ash-gray: #b3bfb8ff;
+--mint-cream: #f0f7f4ff;
+}
+html, body {
+    font-family: "Source Sans 3", Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: var(--ash-gray);
+    color: var(--rich-black);
+}
+
+div{
+    align-content: center;
+}
+
+h1{
+    font-family: "Expletus Sans", Helvetica, sans-serif;
+    font-size: 4rem;
+    text-decoration: underline;
+    text-align: center;
+    padding: 2rem;
+}
+h2{
+    font-size: 2rem;
+}
+
+.container {
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: column;
+}
+.textblock{
+    /* background-color: aquamarine; */
+    width:fit-content;
+    margin: auto;
+}
+#intro{
+    height: fit-content;
+}
+
+/* Defining the sections */
+#sections{
+    height: 330px;
+}
+.row{
+    /* background-color: coral; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+#phonology{background-image: url(../images/phonology.png);}
+#structure{ background-image: url(../images/structure.jpg);}
+#meaning{ background-image: url(../images/meaning.jpg!d);}
+#universality{ background-image: url(../images/universality);}
+#acquisition{ background-image: url(../images/acquisition.jpeg);}
+#neuroscience{ background-image: url(../images/neuroscience.jpg);}
+
+.section {
+    position: relative; /* Add this to make the pseudo-element position relative to the section */
+    background-size: cover;
+    display: inline-flex;
+    width: 32%;
+    align-items: center;
+    justify-items: center;
+    height: 150px;
+    border: 2px solid var(--rich-black);
+    border-radius: 3px;
+    overflow: hidden; /* Hide the overflow to prevent gradient from leaking */
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#087b71aa, #f0f7f455); /* Adjust gradient colors here */
+    opacity: 0; /* Initially hide the gradient */
+    transition: opacity 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.section:hover::before {
+    opacity: 1; /* Show the gradient on hover */
+}
+.section h2{
+    margin: auto;
+    text-shadow: var(--mint-cream) 3px 0 20px;
+    z-index: 10;
+}
