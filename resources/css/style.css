@@ -13,22 +13,76 @@ html, body {
     background-color: var(--ash-gray);
     color: var(--rich-black);
 }
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
 
+/* Header style */
+header .navigation {
+    background-color: var(--rich-black);
+    color: #cdc0a2;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Vertically align items */
+    padding-left: 1rem; /* Add padding to the left for spacing */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+}
+
+/* Navigation list styles */
+.navigation ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display list items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation list item styles */
+.navigation li {
+    height:100%;
+    width: inherit; /* Add spacing between list items */
+}
+
+/* Navigation link styles */
+.navigation a {
+    text-decoration: none;
+    color: inherit;
+    height: inherit;
+    padding: 0.5rem 1rem; /* Add padding to the links */
+    border-radius: 4px; /* Optional rounded corners */
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+/* Hover styles for navigation links */
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change background on hover */
+}
+
+/* Body styles */
+.pagetitle{
+    padding-top: 5rem;
+}
 div{
     align-content: center;
 }
 
 h1{
     font-family: "Expletus Sans", Helvetica, sans-serif;
-    font-size: 4rem;
-    text-decoration: underline;
+    font-size: 3.5rem;
     text-align: center;
     padding: 2rem;
+    color:#f33e18ff;
 }
 h2{
     font-size: 2rem;
 }
-
+p{
+    padding-top: 0.5rem;
+}
 .container {
     /* background-color: gray; */
     display: flex;
@@ -36,8 +90,11 @@ h2{
 }
 .textblock{
     /* background-color: aquamarine; */
-    width:fit-content;
+    width: 59%;
     margin: auto;
+}
+.newparagraph{
+    padding-top: 2rem;
 }
 #intro{
     height: fit-content;
@@ -45,7 +102,7 @@ h2{
 
 /* Defining the sections */
 #sections{
-    height: 330px;
+    height: auto;
 }
 .row{
     /* background-color: coral; */
@@ -53,7 +110,16 @@ h2{
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
-    width: 80%;
+    width: 60%;
+}
+.loner{
+    display:flex;
+    margin: auto;
+    width: 60%;
+    justify-content: space-around;
+}
+.loner .section{
+    padding: 0 5%;
 }
 #phonology{background-image: url(../images/phonology.png);}
 #structure{ background-image: url(../images/structure.jpg);}
@@ -61,12 +127,53 @@ h2{
 #universality{ background-image: url(../images/universality);}
 #acquisition{ background-image: url(../images/acquisition.jpeg);}
 #neuroscience{ background-image: url(../images/neuroscience.jpg);}
-
+#references{
+    width: 25%;
+    background-image: url(../images/references.jpg);
+}
+#evolution{
+    width: 32%;
+    background-image: url(../images/evolution);
+}
+#references h2{
+    opacity: 0;
+}
+.row .section a{
+    display: flex; /* Use flex display to center the content vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    text-decoration: inherit;
+    color: inherit;
+    margin: inherit;
+}
+.loner .section a{
+    display: flex; /* Use flex display to center the content vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    text-decoration: inherit;
+    color: inherit;
+    margin: inherit;
+}
 .section {
+    width: 32%;
     position: relative; /* Add this to make the pseudo-element position relative to the section */
     background-size: cover;
     display: inline-flex;
-    width: 32%;
+    margin: 5px auto;
     align-items: center;
     justify-items: center;
     height: 150px;
@@ -94,4 +201,9 @@ h2{
     margin: auto;
     text-shadow: var(--mint-cream) 3px 0 20px;
     z-index: 10;
+}
+
+.textblock figure{
+    margin:auto;
+    text-align: center;
 }
