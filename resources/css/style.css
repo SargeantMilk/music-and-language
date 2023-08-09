@@ -131,10 +131,7 @@ p{
     width: 25%;
     background-image: url(../images/references.jpg);
 }
-#evolution{
-    width: 32%;
-    background-image: url(../images/evolution);
-}
+
 #references h2{
     opacity: 0;
 }
